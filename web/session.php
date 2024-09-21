@@ -1,5 +1,6 @@
 <?php
 //echo "<!-- Begin session.php at ".date("H:i:s", microtime(true))." -->\r\n";
+date_default_timezone_set('Australia/Adelaide');
 $loadstart = date("g:i:s A", microtime(true));
 $loadmicrostart = explode(' ', microtime());
 $loadmicrostart = $loadmicrostart[1] + $loadmicrostart[0];
