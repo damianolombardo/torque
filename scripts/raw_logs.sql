@@ -155,6 +155,6 @@ CREATE TABLE IF NOT EXISTS `raw_logs` (
   `kff5203` float NOT NULL DEFAULT '0',
   `k2102` float NOT NULL DEFAULT '0',
   `k2110` float NOT NULL DEFAULT '0',
-  `kf210` float NOT NULL DEFAULT '0',
+  `ked0009` float NOT NULL DEFAULT '0',
   KEY `session` (`session`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
