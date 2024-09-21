@@ -142,7 +142,7 @@ kff1277,0-30mph Time
 kff5201,Miles Per Gallon(Long Term Average)
 kff5202,Kilometers Per Litre(Long Term Average)
 kff5203,Litres Per 100 Kilometer(Long Term Average)
-k2102	Transmission Temperature
-K2110	Exhuast Temperature
+k2102 Transmission Temperature
+K2110 Exhuast Temperature
 session,Session ID
 time,Timestamp
