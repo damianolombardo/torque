@@ -30,7 +30,7 @@ I also use this to position the adapter in a better location:
 First clone the repo:
 
 ```bash
-git clone [https://github.com/Rbjett/torque]
+git clone https://github.com/Rbjett/torque
 cd torque
 ```
 
