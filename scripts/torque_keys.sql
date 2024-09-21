@@ -168,7 +168,6 @@ INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `f
 INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('kff1005', 'GPS Longitude', 'double', '&deg;', 1, 0, 0, 100);
 INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('k2110', 'Exhaust Gas Temperature', 'float', '&deg;C', 1, 0, 0, 800);
 INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('k2102', 'Transmission Temperature', 'float', '&deg;C', 1, 0, -40, 215);
-INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('kff1001', 'kff1001', 'varchar(255)', NULL, 1, 0, NULL, NULL);
 INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('kff1007', 'kff1007', 'varchar(255)', NULL, 1, 0, NULL, NULL);
 INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('kff1007', 'GPS Altitude', 'float', 'm', 1, 0, 0, 100);
 INSERT INTO `torque_keys` (`id`, `description`, `type`, `units`, `populated`, `favorite`, `min`, `max`) VALUES('kf210', 'Boost', 'float', 'psi', 1, 0, 0, 35);
