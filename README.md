@@ -6,9 +6,6 @@ The interface allows the user to:
   * Create time series plots of OBD2 data
   * Easily export data to CSV or JSON
 
-# Demo #
-
-[Check out the demo!](http://hda.surfrock66.com/torquetest/)
 
 # Requirements #
 
