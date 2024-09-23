@@ -1,6 +1,8 @@
 <?php
 
 //echo "<!-- Begin creds.php -->\r\n";
+// set time
+date_default_timezone_set('Country/Local'); 
 // MySQL Credentials
 $db_host = 'localhost';
 $db_user = '';     // Enter your MySQL username
