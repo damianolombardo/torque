@@ -1,9 +1,6 @@
 <?php
 //echo "<!-- Begin session.php at ".date("H:i:s", microtime(true))." -->\r\n";
-date_default_timezone_set('Australia/Adelaide');
-$loadstart = date("g:i:s A", microtime(true));
-$loadmicrostart = explode(' ', microtime());
-$loadmicrostart = $loadmicrostart[1] + $loadmicrostart[0];
+
 ini_set('memory_limit', '-1');
 require_once("./db.php");
 require_once("./auth_user.php");
@@ -11,6 +8,10 @@ require_once("./del_session.php");
 //require_once("./merge_sessions.php");
 require_once("./get_sessions.php");
 require_once("./get_columns.php");
+
+$loadstart = date("g:i:s A", microtime(true));
+$loadmicrostart = explode(' ', microtime());
+$loadmicrostart = $loadmicrostart[1] + $loadmicrostart[0];
 
 //Temp catch for missing creds variables for pull#43
 if ($mapProvider == null){
@@ -466,7 +467,7 @@ if (isset($sids[0])) {
         </div>
         <div class="row center-block" style="padding-bottom:18px;text-align:center;">
           <a href="./pid_edit.php" title="Edit PIDs">Edit PIDs</a><br />
-          <a href="https://github.com/surfrock66/torque" title="View Source On Github">View Source On Github</a>
+          <a href="https://github.com/Rbjett/torque" title="View Source On Github">View Source On Github</a>
           <p style="font-size:10px;margin-top:20px;" >
             Render Start: <?php echo $loadstart; ?>; Render End: <?php $loadend = date("h:i:s A", microtime(true)); echo $loadend; ?><br />
             Load Time: <?php $loadmicroend = explode(' ', microtime()); $loadmicroend = $loadmicroend[1] + $loadmicroend[0]; echo $loadmicroend-$loadmicrostart; ?> seconds<br />
