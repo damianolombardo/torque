@@ -159,15 +159,24 @@ if (sizeof($_GET) > 0) {
     $sql = "INSERT INTO $db_table_full (".quote_names($datakeys).") VALUES (".quote_values($datavalues).")";
     mysqli_query($con, $sql) or die(mysqli_error($con));
     // Update session variables
+     // If this is the earliest timestamp for this session, update the "Session start time"
+     if ( $sessTimeStart > $sesstime ) {
+      $sessTimeStart = $sesstime;
+    // Increment the session size counter
+    $sessSize = $sessSize + 1;
+    // Update the session table
+    $dataqrystring = "UPDATE $db_sessions_table SET timestart = ".quote_value($sessTimeStart).", sessionsize = ".quote_value($sessSize)." WHERE session = ".quote_value($sessuploadid);
+    mysqli_query($con, $dataqrystring) or die(mysqli_error($con));
+    }
     // If this is the latest timestamp for this session, update the "Session end time"
     if ( $sessTimeEnd < $sesstime ) {
       $sessTimeEnd = $sesstime;
-    }
     // Increment the session size counter
     $sessSize = $sessSize + 1;
     // Update the session table
     $dataqrystring = "UPDATE $db_sessions_table SET timeend = ".quote_value($sessTimeEnd).", sessionsize = ".quote_value($sessSize)." WHERE session = ".quote_value($sessuploadid);
     mysqli_query($con, $dataqrystring) or die(mysqli_error($con));
+    }
   }
   if ( $submitval == 3 ) {
     $profileqrystring = "UPDATE $db_sessions_table SET profileName = ".quote_value($sessprofilename).", profileFuelType = ".quote_value($sessprofilefueltype).", profileWeight = ".quote_value($sessprofileweight).", profileVe = ".quote_value($sessprofileve).", profileFuelCost = ".quote_value($sessprofilefuelcost)." WHERE session = ".quote_value($sessuploadid);
