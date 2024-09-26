@@ -38,7 +38,7 @@ if (sizeof($_GET) > 0) {
   $current_table_list_query = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.tables WHERE table_schema = '$db_name' and TABLE_NAME = '$db_table_full'";
   $current_table_list = mysqli_query($con, $current_table_list_query);
   if ( ! mysqli_fetch_assoc($current_table_list) ) {
-    mysqli_query($con, "CREATE TABLE $db_table_full SELECT * FROM $newest_table WHERE 1=0") or die(mysqli_error($con));
+    mysqli_query($con, "CREATE TABLE $db_table_full SELECT * FROM $newest_table WHERE 1=0 ENGINE = InnoDB") or die(mysqli_error($con));
   }
   foreach ($_GET as $key => $value) {
     // We will operate on 5 data sets which are defined by 5 "submit values"
