@@ -131,7 +131,9 @@ if (sizeof($_GET) > 0) {
   //  so huge, and has so much repeating data. This is my attempt to flatten the redundant data into the
   //  sessions table; this code checks if there is already a row for the current session, and if there is, only 
   //  update the ending time and the count of datapoints.  If there isn't a row, insert one.
-
+  $sessTimeStart = "0";
+  $sessTimeEnd = "0";
+  $sessSize = "0";
   // No matter what, if the submitval is higher than 0, make sure a session exists.  
   //   If one doesn't, create an entry.  If one does, collect current values
   if ( $submitval >= 1 && (sizeof($sesskeys) === sizeof($sessvalues)) && sizeof($sesskeys) > 0 ) {
