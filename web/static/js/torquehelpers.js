@@ -267,7 +267,7 @@ initMapOpenlayers = () => {
         const [width, geom, max] = [4, f.getGeometry(), Math.max.apply(null, spd.filter(v => v > 0))];
         let [i, stl] = [0, []];
         geom.forEachSegment(
-            (s, e) => stl.push(new ol.style.Style({ geometry: new ol.geom.LineString([s, e]), stroke: new ol.style.Stroke({ color: "hsl(" + (100 * (1 - spd[i] / max)) + ",100%,50%)", width }) })) && i++ && null);
+            (s, e) => stl.push(new ol.style.Style({ geometry: new ol.geom.LineString([s, e]), stroke: new ol.style.Stroke({ color: "hsl(" + (300 * (1 - spd[i] / max)) + ",100%,50%)", width }) })) && i++ && null);
         return stl;
     }
     //functions to create stylized circle for start and end, also marker when hovering chart
