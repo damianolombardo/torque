@@ -204,8 +204,8 @@ initMapOpenlayers = () => {
     let oMapLst = { //base map list and options that don't need an api key
         'Openstreetmap': { labels: [''], styles: [''], styles: [''], url: 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png' },
         'Esri': {
-            labels: ['World Imagery'],
-            styles: ['World_Imagery'],
+            labels:['World Street Map','Dark Gray','Light Gray','World Topo Map','World Imagery','NatGeo World Map'/*,'USATopo'*/],
+            styles:['World_Street_Map','canvas/World_Dark_Gray_Base','Canvas/World_Light_Gray_Base','World_Topo_Map','World_Imagery','NatGeo_World_Map'],
             url: 'https://services.arcgisonline.com/ArcGIS/rest/services/{style}/MapServer/tile/{z}/{y}/{x}'
         },
     };
