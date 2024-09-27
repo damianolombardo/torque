@@ -25,8 +25,8 @@ $uri_homeassistant = '';
 //$token_homeassistant = '';
 
 //Map options
-$mapProvider = 'esri'; // google,esri,stamen,openstreetmap,mapbox,tomtom,thunderforest,here,maptiler
-$mapStyleSelect = 'Streets'; //provider specific see README e.g. roadmap for google, Streets for esri, not used for openstreetmap
+$mapProvider = 'openlayers'; // google,esri,stamen,openlayers,mapbox,tomtom,thunderforest,here,maptiler
+$mapStyleSelect = ''; //provider specific see README e.g. roadmap for google, Streets for esri, not used for openlayers
 
 // Array of user credentials for Browser login
 $users = array();
