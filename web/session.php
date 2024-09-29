@@ -259,10 +259,10 @@ if (isset($sids[0])) {
         </div>
       </div>
     </div>
-    <div id="map-container" class="col-md-7 col-xs-12">
+    <div id="map-container" class="col-md-6 col-xs-12">
       <div id="map-canvas"></div>
     </div>
-    <div id="right-container" class="col-md-5 col-xs-12">
+    <div id="right-container" class="col-md-6 col-xs-12">
       <div id="right-cell">
         <h4>Select Session</h4>
         <div class="row center-block" style="padding-bottom:4px;">
@@ -343,11 +343,6 @@ if (isset($sids[0])) {
 <?php } ?>
         </div>
 
-<!-- slider -->
-<span class="h4">Trim Session</span>
-<input type="text" id="slider-time" readonly style="width:300px; border:0; color:#f6931f; font-weight:bold;" sv0="-1" sv1="-1">
-<div id="slider-range11"></div>
-
 <!-- Variable Select Block -->
 <?php if ($setZoomManually === 0) { ?>
         <h4>Select Variables to Compare</h4>
@@ -394,7 +389,7 @@ if (isset($sids[0])) {
           </div>
 <?php   } else { ?>
           <div class="demo-container">
-            <div id="placeholder" class="demo-placeholder" style="height:300px;"></div>
+            <div id="placeholder" class="demo-placeholder" style="height:600px;"></div>
           </div>
 <?php   } ?>
 <?php } else { ?>
@@ -402,7 +397,12 @@ if (isset($sids[0])) {
             <h5><span class="label label-warning">Select a session first!</span></h5>
           </div>
 <?php } ?>
-        </div><br />
+        </div>
+
+        <!-- slider -->
+<span class="h4">Trim Session</span>
+<input type="text" id="slider-time" readonly style="width:300px; border:0; color:#f6931f; font-weight:bold;" sv0="-1" sv1="-1">
+<div id="slider-range11"></div><br />
 
 <!-- Data Summary Block -->
         <h4>Data Summary</h4>
