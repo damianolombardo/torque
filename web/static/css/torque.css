@@ -9,6 +9,7 @@ body {
 
 #map-container {
     height: 90%;
+    position: fixed ;
     padding-top: 65px;
     padding-left: 2%;
     padding-right: 1%;
@@ -24,6 +25,8 @@ body {
     height: 90%;
     padding-top: 62px;
     padding-right: 2%;
+    float: right !important;
+    
 }
 
 #right-cell {
@@ -105,6 +108,7 @@ ul.chosen-choices li input {
 @media (max-width: 767px) {
     #map-container {
         height: 42%;
+        position: relative;
     }
 }
 
