@@ -26,7 +26,6 @@ body {
     padding-top: 62px;
     padding-right: 2%;
     float: right !important;
-    
 }
 
 #right-cell {
@@ -96,7 +95,7 @@ ul.chosen-choices li input {
     padding-bottom: 10px !rimportant;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850x) {
     .navbar-nav {
         margin: 0 auto;
         display: table;
@@ -105,11 +104,12 @@ ul.chosen-choices li input {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 849px) {
     #map-container {
-        height: 42%;
+        height: 65%;
         position: relative;
     }
+  
 }
 
 canvas * {
