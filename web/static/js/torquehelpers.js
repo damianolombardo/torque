@@ -172,7 +172,7 @@ updCharts = () => {
             gData.forEach(v => flotData.push({ label: v[1], data: v[2].map(a => [parseInt(a[0]), a[1]]) }));
             if ($('#placeholder')[0] == undefined) { //this would only be true the first time we load the chart
                 $('#Chart-Container').empty();
-                $('#Chart-Container').append($('<div>', { class: 'demo-container' }).append($('<div>', { id: 'placeholder', class: 'demo-placeholder', style: 'height:300px' })));
+                $('#Chart-Container').append($('<div>', { class: 'demo-container' }).append($('<div>', { id: 'placeholder', class: 'demo-placeholder', style: 'height:500px' })));
                 doPlot("right");
             }
             //always update the chart trimmed range when plotting new data
@@ -204,8 +204,8 @@ initMapOpenlayers = () => {
     let oMapLst = { //base map list and options that don't need an api key
         'Openstreetmap': { labels: [''], styles: [''], styles: [''], url: 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png' },
         'Esri': {
-            labels:['World Street Map','Dark Gray','Light Gray','World Topo Map','World Imagery','NatGeo World Map'/*,'USATopo'*/],
-            styles:['World_Street_Map','canvas/World_Dark_Gray_Base','Canvas/World_Light_Gray_Base','World_Topo_Map','World_Imagery','NatGeo_World_Map'],
+            labels: ['World Street Map', 'Dark Gray', 'Light Gray', 'World Topo Map', 'World Imagery', 'NatGeo World Map'/*,'USATopo'*/],
+            styles: ['World_Street_Map', 'canvas/World_Dark_Gray_Base', 'Canvas/World_Light_Gray_Base', 'World_Topo_Map', 'World_Imagery', 'NatGeo_World_Map'],
             url: 'https://services.arcgisonline.com/ArcGIS/rest/services/{style}/MapServer/tile/{z}/{y}/{x}'
         },
     };
