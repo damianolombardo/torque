@@ -172,7 +172,7 @@ updCharts = () => {
             gData.forEach(v => flotData.push({ label: v[1], data: v[2].map(a => [parseInt(a[0]), a[1]]) }));
             if ($('#placeholder')[0] == undefined) { //this would only be true the first time we load the chart
                 $('#Chart-Container').empty();
-                $('#Chart-Container').append($('<div>', { class: 'demo-container' }).append($('<div>', { id: 'placeholder', class: 'demo-placeholder', style: 'height:500px' })));
+                $('#Chart-Container').append($('<div>', { class: 'demo-container' }).append($('<div>', { id: 'placeholder', class: 'demo-placeholder', style: 'height:600px' })));
                 doPlot("right");
             }
             //always update the chart trimmed range when plotting new data
