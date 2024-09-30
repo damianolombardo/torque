@@ -389,7 +389,7 @@ if (isset($sids[0])) {
           </div>
 <?php   } else { ?>
           <div class="demo-container">
-            <div id="placeholder" class="demo-placeholder" style="height:600px;"></div>
+            <div id="placeholder" class="demo-placeholder" style="height: 450px;"></div>
           </div>
 <?php   } ?>
 <?php } else { ?>
