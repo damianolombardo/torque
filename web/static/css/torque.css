@@ -9,9 +9,10 @@ body {
 
 #map-container {
     height: 90%;
+    width:50%;
     position: fixed ;
     padding-top: 65px;
-    padding-left: 2%;
+    padding-left: 1%;
     padding-right: 1%;
 }
 
@@ -23,15 +24,17 @@ body {
 
 #right-container {
     height: 90%;
+    width: 50%;
     padding-top: 62px;
     padding-right: 2%;
+    padding-left: 1%;
     float: right !important;
 }
 
 #right-cell {
     height: 100%;
-    width: 96%;
-    position: absolute;
+    width: 100%;
+    position: relative;
 }
 
 .row.right-row {
@@ -108,7 +111,26 @@ ul.chosen-choices li input {
     #map-container {
         height: 65%;
         position: relative;
+        width: 100%;
+        padding-top: 65px;
+        padding-left: 2%;
+        padding-right: 2%;
     }
+    #right-container{
+        height: 65%;
+        width: 100%;
+        position: relative;
+        padding-top: 62px;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    #right-cell {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            padding-right: 2%;
+            padding-left: 2%;
+        }
   
 }
 
@@ -134,12 +156,10 @@ canvas * {
 
 .ui-slider {
     position: relative;
-    padding-left: 2%;
 }
 
 .ui-slider .ui-slider-handle {
     position: absolute;
-    padding-left: 2%;
     z-index: 2;
     width: 1.1em;
     height: 1.2em;
@@ -150,7 +170,6 @@ canvas * {
 
 .ui-slider .ui-slider-range {
     position: absolute;
-    padding-left: 2%;
     z-index: 1;
     font-size: .7em;
     display: block;
