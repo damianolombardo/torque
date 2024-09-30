@@ -342,6 +342,11 @@ if (isset($sids[0])) {
           </div>
 <?php } ?>
         </div>
+        
+  <!-- slider -->
+<span class="h4">Trim Session</span>
+<input type="text" id="slider-time" readonly style="width:300px; border:0; color:#f6931f; font-weight:bold;" sv0="-1" sv1="-1">
+<div id="slider-range11"></div>
 
 <!-- Variable Select Block -->
 <?php if ($setZoomManually === 0) { ?>
@@ -397,12 +402,9 @@ if (isset($sids[0])) {
             <h5><span class="label label-warning">Select a session first!</span></h5>
           </div>
 <?php } ?>
-        </div>
+        </div><br />
 
-        <!-- slider -->
-<span class="h4">Trim Session</span>
-<input type="text" id="slider-time" readonly style="width:300px; border:0; color:#f6931f; font-weight:bold;" sv0="-1" sv1="-1">
-<div id="slider-range11"></div><br />
+      
 
 <!-- Data Summary Block -->
         <h4>Data Summary</h4>
