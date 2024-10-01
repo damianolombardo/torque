@@ -7,6 +7,7 @@ require_once ('creds.php');
 if (!isset($con)){ //only open new connection if not connected
   $con = mysqli_connect($db_host, $db_user, $db_pass,$db_name,$db_port) or die(mysqli_error($con));
   mysqli_select_db($con, $db_name) or die(mysqli_error($con));
+  mysqli_query($con, "SET time_zone='$db_offset';");
 }
 
 // helper function to quote a single identifier
