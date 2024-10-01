@@ -1,8 +1,10 @@
 <?php
 
 //echo "<!-- Begin creds.php -->\r\n";
-// set time
-date_default_timezone_set('Country/Local'); 
+// set time php
+date_default_timezone_set('Country/Area');
+// set time mysql be sure to use + or -
+$db_offset = 'HH:MM';
 // MySQL Credentials
 $db_host = 'localhost';
 $db_user = '';     // Enter your MySQL username
