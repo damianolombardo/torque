@@ -139,7 +139,9 @@ $mapStyleSelect = 'Streets'; //provider specific see README e.g. roadmap for goo
 |         |        |reduced.night  |navigation-day-v1    |topo     |mobile-atlas   |
 |         |        |               |navigation-night-v1  |voyager  |neighbourhood  |
 
-# Settings in Torque App #
+# Settings in Torque App - REQUIRED BEFORE UI WILL LOAD #
+
+
 
 To use your database/server with Torque, open the app on your phone and navigate to:
 
