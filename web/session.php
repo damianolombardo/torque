@@ -9,7 +9,7 @@ require_once("./del_session.php");
 require_once("./get_sessions.php");
 require_once("./get_columns.php");
 
-$loadstart = date("g:i:s A", microtime(true));
+$loadstart = date("g:i:s A", intval(microtime(true)));
 $loadmicrostart = explode(' ', microtime());
 $loadmicrostart = $loadmicrostart[1] + $loadmicrostart[0];
 
@@ -90,8 +90,8 @@ if (isset($sids[0])) {
   if($idx>0) {
     $session_id_next = $sids[$idx-1];
   }
-  $tableYear = date( "Y", $session_id/1000 );
-  $tableMonth = date( "m", $session_id/1000 );
+  $tableYear = date( "Y", intval($session_id/1000 ));
+  $tableMonth = date( "m", intval($session_id/1000 ));
   $db_table_full = "{$db_table}_{$tableYear}_{$tableMonth}";
   // Get GPS data for the currently selectedsession
   $sessionqry = mysqli_query($con, "SELECT kff1006, kff1005, kd FROM $db_table_full
@@ -219,7 +219,7 @@ if (isset($sids[0])) {
         flotData = [
 <?php   $i=1; ?>
 <?php   while ( isset(${'var' . $i }) && !empty(${'var' . $i }) ) { ?>
-            { data: <?php echo "s$i"; ?>, label: <?php echo "${'v'.$i.'_label'}"; ?> }<?php if ( isset(${'var'.($i+1)}) ) echo ","; ?>
+            { data: <?php echo "s$i"; ?>, label: <?php echo "{${'v'.$i.'_label'}}"; ?> }<?php if ( isset(${'var'.($i+1)}) ) echo ","; ?>
 <?php     $i = $i + 1; ?>
 <?php   } ?>
         ];
@@ -471,7 +471,7 @@ if (isset($sids[0])) {
           <a href="./pid_edit.php" title="Edit PIDs">Edit PIDs</a><br />
           <a href="https://github.com/Rbjett/torque" title="View Source On Github">View Source On Github</a>
           <p style="font-size:10px;margin-top:20px;" >
-            Render Start: <?php echo $loadstart; ?>; Render End: <?php $loadend = date("h:i:s A", microtime(true)); echo $loadend; ?><br />
+            Render Start: <?php echo $loadstart; ?>; Render End: <?php $loadend = date("h:i:s A", intval(microtime(true))); echo $loadend; ?><br />
             Load Time: <?php $loadmicroend = explode(' ', microtime()); $loadmicroend = $loadmicroend[1] + $loadmicroend[0]; echo $loadmicroend-$loadmicrostart; ?> seconds<br />
             Session ID: <?php echo $session_id; ?>
           </p>

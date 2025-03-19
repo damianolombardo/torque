@@ -64,7 +64,7 @@ $seshdates = array();
 $seshsizes = array();
 $seshprofile = array();
 while($row = mysqli_fetch_assoc($sessionqry)) {
-    $session_duration_str = gmdate("H:i:s", ((int)$row["timeend"] - (int)$row["timestart"])/1000);
+    $session_duration_str = gmdate("H:i:s", (int)(((int)$row["timeend"] - (int)$row["timestart"]) / 1000));
     $session_profileName = $row["profileName"];
     $session_size = $row["sessionsize"];
 

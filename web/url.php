@@ -6,7 +6,7 @@ require("./db.php");
 
 // Get the Full URL to the session.php file
 $thisfile = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$parts = strtok("url.php", $thisfile);
+$parts = explode("url.php", $thisfile);
 // Capture the session ID we're going to be working with
 if (isset($_GET["seshid"])) {
 	$seshid = strval(mysqli_escape_string($con, $_GET["seshid"]));
@@ -59,7 +59,7 @@ if (isset($_GET["makechart"])) {
 		$i = 1;
 		while( isset($plotdataarray[$i-1]) && $plotdataarray[$i-1] <> "Plot!" ) {
             ${'s' . $i . 'data'} = $plotdataarray[$i-1];
-			$outurl = $outurl."&s$i=${'s' . $i . 'data'}";
+			$outurl = $outurl."&s$i={${'s' . $i . 'data'}}";
 			$i = $i + 1;
 		}
     }
